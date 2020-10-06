@@ -39,5 +39,5 @@ exports.login = async (req, res, next) => {
   }
 
   const token = user.getSignedJwtToken();
-  res.status(200).json({ success: true, token, email, name: user.name });
+  res.status(200).json({ token, email, name: user.name });
 };
